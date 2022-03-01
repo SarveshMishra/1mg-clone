@@ -1,6 +1,9 @@
 form {
     display: inline;
 }
+ul {
+    list-style-type: none;
+}
 .footer_flex-box{
 display: flex;
 flex-direction : row;
@@ -15,15 +18,9 @@ align-items: normal;
     justify-content:space-around;
     flex-wrap:nowrap;
     background-color: #FFFCF8;
+    text-align: left;
 }
-/* #footer_flex_container2>div{
-    display:flex;
-    border:1px solid #ccc;
-    justify-content:space-around;
-    flex-wrap: wrap;
-    background-color: #FFFCF8;
-    flex-direction: row;
-} */
+
 .footer_flex_container2{
     display:flex;
     border-top:1px solid #eaeaea;
