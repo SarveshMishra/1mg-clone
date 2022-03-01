@@ -1,0 +1,16 @@
+
+#footer_flex_container1{
+    display:flex;
+    border:1px solid #ccc;
+    justify-content:space-around;
+    flex-wrap:no-wrap;
+    background-color: #FFFCF8;
+}
+#footer_flex_container2>div{
+    display:flex;
+    border:1px solid #ccc;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    background-color: #FFFCF8;
+    flex-direction: row;
+}
