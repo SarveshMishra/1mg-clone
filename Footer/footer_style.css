@@ -115,6 +115,9 @@ color: #000;
     font-size: 20px;
     font-weight: 400;
 }
+.footer-link a{
+ color: #111;;
+}
 
 .footer_flex_container2{
     display:flex;
