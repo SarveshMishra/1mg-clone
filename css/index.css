@@ -1,0 +1,116 @@
+body {
+	font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #666;
+	margin: 0;
+	background-color: #f6f6f6;
+}
+h2,
+h3,
+h4 {
+	color: #1a1a1a;
+}
+h3 {
+	font-size: 1rem;
+}
+
+h2 {
+	font-size: 1.15rem;
+}
+h3 {
+	display: block;
+	font-size: 1.17em;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+	font-weight: bold;
+}
+
+/* Bottom Description Section */
+.description {
+	padding: 1rem 2rem;
+	display: block;
+	box-sizing: border-box;
+	font-size: 16px;
+	background-color: #fff;
+	border-bottom: 1px solid #cecece;
+}
+
+.popular {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #fff;
+	border-bottom: 1px solid #cecece;
+}
+
+#moto {
+	display: flex;
+	justify-content: center;
+	color: #111;
+	font-size: 24px;
+	padding: 24px 0;
+	margin: 0;
+}
+
+.popular-data {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+}
+
+.count {
+	font-size: 32px;
+	font-weight: 700;
+	color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.line {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5px;
+}
+.horizontal-line {
+	height: 1px;
+	border: 1px solid #eaeaea;
+	z-index: 9999;
+	width: 90%;
+	margin: 24px auto;
+	left: 5%;
+}
+
+.app-download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	font-size: 20px;
+	color: #111;
+}
+.app-download > div {
+	margin: 10px;
+}
+.app-download .upload-btn {
+	width: fit-content;
+}
+.app-download .input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.app-download input {
+	outline: none;
+	box-shadow: none;
+	color: #000;
+	height: 40px;
+	width: 300px;
+	border: none;
+	background-color: #f1f4f6;
+	padding-left: 15px;
+	vertical-align: middle;
+	color: #000;
+}
