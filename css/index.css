@@ -114,3 +114,204 @@ h3 {
 	vertical-align: middle;
 	color: #000;
 }
+
+
+/* Full body health checkups  */
+
+#categoryContainer{
+	width:100%;
+	font-family: 'Clear Sans';
+
+}
+#cat-title{
+	width:85%;
+	padding:15px 20px;
+	margin:auto;
+}
+.titleText{
+	width: 210px;
+	height:25.7px;
+	font-size: 20px;
+	color:rgb(78, 78, 78);
+	
+}
+span~span{
+	background-color: rgb(255,111,97);
+	font-size: 14px;
+	padding:3px;
+	border-radius: 3px;
+   	float: right;
+   	color: white;
+}
+#slider-container{
+	width:100%;
+	height: 165px;
+	background-color: rgb(255, 255, 255);
+	position:relative;
+	/* padding-left: 50px; */
+	justify-content: center;
+}
+#slider{
+	width:85%;
+	height: 165px;
+	display: flex;
+	overflow-x:hidden;
+	background-color: white;
+	padding:15px 0;
+}
+#slider::-webkit-scrollbar{
+	display: none;
+}
+.item{
+	width:265px;
+	height: 150px;
+	border:rgb(238,238,238) solid 1px;
+	padding: 10px 0px 0 10px;
+	margin-left: 15px;
+}
+.item:hover{
+	border:rgb(238,238,238) solid 3px;
+}
+.itemHeading{
+	display: flex;
+	height: 30px;
+	align-items: center;
+}
+.itemHeading>h4{
+	width: auto;
+	height: 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	color: rgb(78, 78, 78);
+}
+.safe-logo{
+	width: 60px;
+	height: 20px;
+	display: flex;
+	text-align: justify;
+	background-color: rgb(255,227,194);
+}
+.safe-logo>p{
+	margin: 0;
+	font-size: 13px;
+	padding:3px;
+	font-weight: bold;
+	color: rgb(92, 91, 91);
+}
+.testIncludes{
+	width:240px;
+	height:17px;
+	font-size:14px ;
+	color:rgb(149,149,149);
+}
+.tataLogo{
+	display: flex;
+	text-align: center;
+}
+.tataLogo>img{
+	width:71px;
+	height: 43px;
+	border: rgb(238,238,238) solid 1px;
+	border-radius: 3px;
+	margin: 10px 10px 10px 0;
+}
+.rating{
+	display: flex;
+	width:34px;
+	height: 18.7px;
+	text-align: justify;
+	background-color: rgb(26,170,42);
+	margin-top: 8%;
+	padding-left: 2px;
+	font-size: 14px;
+	border-radius: 3px;
+	color: white;
+}
+.rating>img{
+	width:10px;
+	height: 10px;
+	padding:3px;
+}
+.rating~p{
+	margin: 0;
+	margin-top:8%;
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+.itemPrice{
+	display: flex;
+
+}
+.price{
+	width: 30px;
+	height:18px;
+	margin:0;
+	color: rgb(81,81,81);
+	font-size: 15px;
+	padding:1px 4px;
+	/* border:black solid 1px; */
+}
+.actualPrice{
+	width:36px;
+	height: 17.14px;
+	margin:0;
+	font-size:13px;
+	color: rgb(117,117,117);
+	padding:3px 5px;
+	/* border:black solid 1px; */
+}
+.discount{
+	width:45.70px;
+	height:15px;
+	padding:3px;
+	background-color:rgb(243,251,244);
+	color:rgb(56,182,70);
+	font-size:13px;
+	border: rgb(56,182,70) dashed 1px;
+}
+
+#rightArrow{
+	width:19px;
+	padding:14px;
+	box-shadow: 5px 5px 4px rgb(238,238,238);
+	border:rgb(219,219,219) solid 1px;
+	border-radius: 100px;
+	position:absolute;
+	bottom:95px;
+	left:90%;
+	bottom:100px;
+	margin:20px;
+	float: right;
+	background:white;
+	z-index: 20;
+}
+#rightArrow>div{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border-top: 3px solid rgb(255,111,97);
+	border-right: 3px solid rgb(255,111,97);
+	transform: rotate(45deg);
+}
+#leftArrow{
+	width:19px;
+	padding:14px;
+	box-shadow: 5px 5px 4px rgb(238,238,238);
+	border:rgb(219,219,219) solid 1px;
+	border-radius: 100px;
+	position: absolute;
+	margin:20px;
+	float: right;
+	background:white;
+	display: none;
+}
+#leftArrow>div{
+	width: 15px;
+	height: 15px;
+	border-top: 3px solid rgb(255,111,97);
+	border-right: 3px solid rgb(255,111,97);
+	transform: rotate(-135deg);
+}
+
