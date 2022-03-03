@@ -1,0 +1,104 @@
+#ltimgFlex{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+.ltimgSlider{
+    
+    width: 40%;
+    height: 20vh;
+    background-image: url('../image/slideImg1.png');
+    background-size: 100% 100%;
+
+    
+    animation: changeImg 20s linear infinite;
+    
+}
+.fix1{
+    padding-top:0px;
+}
+.fix2{
+    color: #666666;
+    weight:10px;
+}
+.ltlogoflex{
+    display: flex;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.ltfix{
+    margin-top: 0%;
+    padding-left: 30px;
+    
+    
+}
+.logoflex1{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding-left: 30px;
+    margin-right: 30px;
+    
+}
+.logoflex2{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding-left: 30px;
+    margin-right: 30px;
+    border-left: 1px solid #555556;
+}
+.logoflex3{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding-left: 30px;
+    margin-right: 30px;
+    border-left: 1px solid #555556;
+}
+.logoflex4{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding-left: 30px;
+    margin-right: 30px;
+    border-left: 1px solid #555556;
+}
+.logoflex5{
+    display: flex;
+    height: 30px;
+    width: 30px;
+    padding-left: 30px;
+    margin-right: 30px;
+    border-left: 1px solid #555556;
+}
+.ltbutton{
+   background-color: #EF6D5F;
+   color:#fff;
+   min-width: 70px;
+
+}
+
+
+
+
+@keyframes changeImg {
+    0%{
+        background-image: url('../image/ltslideShow1.png');
+    }
+    25%{
+        background-image: url('../image/ltslideShow2.png');
+    }
+    50%{
+        background-image: url('../image/ltslideShow3.png');
+    }
+    75%{
+        background-image: url('../image/ltslideShow4.png');
+    }
+    100%{
+        background-image: url('../image/ltslideShow5.png');
+    }
+} 
