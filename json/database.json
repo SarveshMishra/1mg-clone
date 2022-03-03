@@ -1,0 +1,178 @@
+{
+	"FeatureBrand": [
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204166/zojloxezzvymueoyuyt5.png",
+			"title": "Accu-Chek"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646027547/udfnznpn346kvtwwfi0f.png",
+			"title": "Mamaearth"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204186/rnae5ho66vamqb50dro1.jpg",
+			"title": "Complan"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204207/ekqfcldju0bisewruom1.jpg",
+			"title": "Cenvitan Multivitamins"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204231/kt8uz5z9clkf6uzica8q.png",
+			"title": "Dr. Morepen"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204248/kkrxqey3xbydquokxvdu.png",
+			"title": "apiva Ayurveda"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646108730/ygnirzha7tsyzzk02xzb.png",
+			"title": "Bournvita"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204267/aygtwi6wdtocp2f2khk6.png",
+			"title": "Kerala Ayurveda"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1646204440/cx5dd58tz3rvu9uyyqcl.png",
+			"title": "Cetaphil"
+		}
+	],
+
+	"shopByHealthConcerns": [
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524227/hgzkyio2rphkn6wjif94.png",
+			"title": "Diabetes Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524269/zo7sc14nqpt6ebeojkvr.png",
+			"title": "Cardiac Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524293/ttagxlnxulsvkyv9fetr.png",
+			"title": "Stomach Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524308/ijgn7fhyq8ig0welmrcp.png",
+			"title": "Liver Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524282/zytsldnf5mvb0u19ydep.png",
+			"title": "Kidney Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524210/ywohqm4txnehsmibypaz.png",
+			"title": "Bone, Joint & Muscle Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524252/hn5bpr1ci2do5kdub51v.png",
+			"title": "Pain Relief"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524188/hr9vysj9cy0sfjs3mpg0.png",
+			"title": "Respiratory Care"
+		},
+		{
+			"image": "https://onemg.gumlet.io/image/upload/w_150,h_150,c_fit,a_ignore,q_auto,f_auto/v1624524365/t0ehbhfrkughfxoygvs2.png",
+			"title": "Eye Care"
+		}
+	],
+
+	"data": [
+		{
+			"title": "Comprehensive Silver Full Body Checkup",
+			"testInclude": "71",
+			"rating": "4.9",
+			"price": "1599",
+			"actualPrice": "2798",
+			"discount": "42"
+		},
+		{
+			"title": "Good Health Platinum Package",
+			"testInclude": "65",
+			"rating": "4.9",
+			"price": "1199",
+			"actualPrice": "2198",
+			"discount": "45"
+		},
+		{
+			"title": "Comprehensive Gold Full Body Checkup",
+			"testInclude": "78",
+			"rating": "4.9",
+			"price": "1999",
+			"actualPrice": "3398",
+			"discount": "41"
+		},
+		{
+			"title": "Women Wellness Advanced Package",
+			"testInclude": "45",
+			"rating": "4.9",
+			"price": "1350",
+			"actualPrice": "2398",
+			"discount": "43"
+		},
+		{
+			"title": "Comprehensive Platinum Full Body Checkup",
+			"testInclude": "91",
+			"rating": "4.9",
+			"price": "3299",
+			"actualPrice": "5998",
+			"discount": "44"
+		},
+		{
+			"title": "Senior Citizen Advanced Package",
+			"testInclude": "57",
+			"rating": "4.9",
+			"price": "1499",
+			"actualPrice": "2698",
+			"discount": "44"
+		},
+		{
+			"title": "Men Health Advanced Package",
+			"testInclude": "43",
+			"rating": "4.9",
+			"price": "1350",
+			"actualPrice": "2398",
+			"discount": "43"
+		},
+		{
+			"title": "Good Health Silver Package",
+			"testInclude": "58",
+			"rating": "4.9",
+			"price": "599",
+			"actualPrice": "1198",
+			"discount": "50"
+		},
+		{
+			"title": "Women Wellness Premium Package",
+			"testInclude": "47",
+			"rating": "4.9",
+			"price": "1649",
+			"actualPrice": "2998",
+			"discount": "44"
+		},
+		{
+			"title": "Good Health Gold Package",
+			"testInclude": "63",
+			"rating": "4.9",
+			"price": "899",
+			"actualPrice": "1798",
+			"discount": "50%"
+		},
+		{
+			"title": "Winter Special Package",
+			"testInclude": "74",
+			"rating": "4.9",
+			"price": "1599",
+			"actualPrice": "2798",
+			"discount": "42%"
+		},
+		{
+			"title": "Tax Saver Health Check",
+			"testInclude": "66",
+			"rating": "4.9",
+			"price": "2499",
+			"actualPrice": "4998",
+			"discount": "50%"
+		}
+	]
+}

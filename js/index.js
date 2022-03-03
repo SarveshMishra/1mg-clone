@@ -2,6 +2,7 @@ import { topHeader, searchBox, links } from "../components/header/navbar.js";
 import showList from "../components/header/index.js";
 import changeLinkColor from "../scripts/changeLinkColor.js";
 import footer from "../components/footer/footer.js";
+
 // Navbar Import section
 document.querySelector(".header-sec-1").innerHTML = await topHeader();
 document.querySelector(".search-box").innerHTML = await searchBox();
@@ -19,110 +20,21 @@ function hide() {
 		}
 	});
 }
-// Body section
+
+// Database Section
+importDB();
+async function importDB() {
+	let DB = await (await fetch("../json/database.json")).json();
+	featureBrands(DB.FeatureBrand);
+	healthCheckup(DB.data);
+	pathologyTest(DB.data);
+	radiologyTest(DB.data);
+	healthConcern(DB.shopByHealthConcerns);
+}
 
 //Full Body Health Checkups
 
-let data = [
-	{
-		title: "Comprehensive Silver Full Body Checkup",
-		testInclude: "71",
-		rating: "4.9",
-		price: "1599",
-		actualPrice: "2798",
-		discount: "42",
-	},
-	{
-		title: "Good Health Platinum Package",
-		testInclude: "65",
-		rating: "4.9",
-		price: "1199",
-		actualPrice: "2198",
-		discount: "45",
-	},
-	{
-		title: "Comprehensive Gold Full Body Checkup",
-		testInclude: "78",
-		rating: "4.9",
-		price: "1999",
-		actualPrice: "3398",
-		discount: "41",
-	},
-	{
-		title: "Women Wellness Advanced Package",
-		testInclude: "45",
-		rating: "4.9",
-		price: "1350",
-		actualPrice: "2398",
-		discount: "43",
-	},
-	{
-		title: "Comprehensive Platinum Full Body Checkup",
-		testInclude: "91",
-		rating: "4.9",
-		price: "3299",
-		actualPrice: "5998",
-		discount: "44",
-	},
-	{
-		title: "Senior Citizen Advanced Package",
-		testInclude: "57",
-		rating: "4.9",
-		price: "1499",
-		actualPrice: "2698",
-		discount: "44",
-	},
-	{
-		title: "Men Health Advanced Package",
-		testInclude: "43",
-		rating: "4.9",
-		price: "1350",
-		actualPrice: "2398",
-		discount: "43",
-	},
-	{
-		title: "Good Health Silver Package",
-		testInclude: "58",
-		rating: "4.9",
-		price: "599",
-		actualPrice: "1198",
-		discount: "50",
-	},
-	{
-		title: "Women Wellness Premium Package",
-		testInclude: "47",
-		rating: "4.9",
-		price: "1649",
-		actualPrice: "2998",
-		discount: "44",
-	},
-	{
-		title: "Good Health Gold Package",
-		testInclude: "63",
-		rating: "4.9",
-		price: "899",
-		actualPrice: "1798",
-		discount: "50%",
-	},
-	{
-		title: "Winter Special Package",
-		testInclude: "74",
-		rating: "4.9",
-		price: "1599",
-		actualPrice: "2798",
-		discount: "42%",
-	},
-	{
-		title: "Tax Saver Health Check",
-		testInclude: "66",
-		rating: "4.9",
-		price: "2499",
-		actualPrice: "4998",
-		discount: "50%",
-	},
-];
-healthCheckup();
-function healthCheckup() {
+function healthCheckup(data) {
 	var slider = document.querySelector("#full-body-health-checkup");
 	data.forEach(function (ele) {
 		let item = document.createElement("div");
@@ -199,11 +111,70 @@ function healthCheckup() {
 		// right_arrow.style.display = "block";
 	}
 }
-// console.log(data);
+
+// Features brands
+
+function featureBrands(data) {
+	let slider = document.getElementById("featured-brands");
+
+	data.forEach((ele) => {
+		let brand_item = document.createElement("div");
+		brand_item.className = "brand-item";
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		let name = document.createElement("p");
+		name.innerHTML = `${ele.title}`;
+
+		brand_item.append(image, name);
+		slider.append(brand_item);
+	});
+	window.brandsSlideR = slideRight;
+	window.brandsSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[1];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
+
+// Shop by health concern
+function healthConcern(data) {
+	let slider = document.getElementById("health-concern");
+
+	data.forEach((ele) => {
+		let brand_item = document.createElement("div");
+		brand_item.className = "brand-item";
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		let name = document.createElement("p");
+		name.innerHTML = `${ele.title}`;
+
+		brand_item.append(image, name);
+		slider.append(brand_item);
+	});
+	window.healthConcernSlideR = slideRight;
+	window.healthConcernSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[1];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
 
 // Pathology Tests
-pathologyTest();
-function pathologyTest() {
+function pathologyTest(data) {
 	var slider = document.querySelector("#pathology-tests");
 	data.forEach(function (ele) {
 		let item = document.createElement("div");
@@ -282,8 +253,7 @@ function pathologyTest() {
 }
 
 // Radiology tests
-radiologyTest();
-function radiologyTest() {
+function radiologyTest(data) {
 	var slider = document.querySelector("#radiology-tests");
 	data.forEach(function (ele) {
 		let item = document.createElement("div");

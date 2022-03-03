@@ -66,7 +66,6 @@ span ~ span {
 }
 .slider-container {
 	width: 100%;
-	height: 200px;
 	background-color: rgb(255, 255, 255);
 	position: relative;
 	padding: 0 6%;
@@ -76,7 +75,8 @@ span ~ span {
 	display: flex;
 	/* transition: all 5s; */
 }
-.slider {
+.slider,
+.brand-slider {
 	display: flex;
 	overflow-x: hidden;
 	background-color: white;
@@ -237,7 +237,34 @@ span ~ span {
 	border-right: 3px solid rgb(255, 111, 97);
 	transform: rotate(-135deg);
 }
-
+/* Featured Brands */
+.brand-slider {
+	min-height: 80px;
+	padding: 0;
+	gap: 10px;
+}
+.brand-item {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 10px;
+	width: 150px;
+	height: 100%;
+	border-radius: 10px;
+	cursor: pointer;
+	/* margin-right: 50px; */
+}
+.brand-item:hover {
+	box-shadow: 0px 0px 4px 0px rgb(0 0 0 / 30%);
+}
+.brand-item img {
+	width: 100%;
+	height: 100%;
+}
+.brand-item > p {
+	margin: 20px 0;
+	width: 100%;
+}
 /* Bottom Description Section */
 .description {
 	padding: 1rem 2rem;
