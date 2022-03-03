@@ -1,6 +1,8 @@
 import { topHeader, searchBox } from "../components/header/navbar.js";
 import showList from "../components/header/index.js";
 import changeLinkColor from "../scripts/changeLinkColor.js";
+import footer from "../components/footer/footer.js";
+
 // Navbar Import section
 document.querySelector(".header-sec-1").innerHTML = await topHeader();
 document.querySelector(".search-box").innerHTML = await searchBox();
@@ -21,3 +23,6 @@ function hide() {
 // Body section
 
 // Footer section
+
+// Footer section
+document.querySelector(".footer").innerHTML= await footer();
