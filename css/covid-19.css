@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.top-bar{
+    background-color: rgb(253, 240, 223);
+    margin:0px auto;
+    padding:0px;
+    max-width:100%;
+}
+.top-bar-content{
+    margin:0 auto;
+    padding:2vw 0vw;
+    width:85%;
+}
+.top-bar-content-flexbox{
+    display:flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 10px;
+    flex-direction: row;
+}
+/* .top-bar-content-flexbox-item1{
+
+
+} */
+.top-bar-content-flexbox-item2{
+padding:0px 15px;
+
+}
+
+.top-bar-header{
+        font-size: 2.6vw;
+        font-weight: 700;
+        line-height: 1.5;
+        padding-top: 8px;
+        color: #3b3b3b;
+}
+.top-bar-header-para{
+    font-size: 1.25vw;
+    padding-top: 8px;
+    line-height: 1.4;
+    color: #767676;
+}
+.span-font{
+    font-weight: 600;
+    color:rgb(59 59 59);
+}
+.top-bar-header-hr{
+    margin: 1.5vw 0 0.3vw 0;
+    border: 1px solid black;
+}
+.anchorTag-top-bar-header{
+    text-decoration: none;
+    color:rgb(59 59 59)!important;
+    cursor:pointer;
+
+}
+.covid-19-top-bar-content{
+    padding-top:20px;
+    background-color:#fff;
+}
+
+.covid-19-header-margin {
+        padding: 2vw 0;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+.covid-19-booking-h2{
+     font-size: 2.1vw;
+    font-weight: 700;
+    padding: 1vw 0;
+    color: #3b3b3b; 
+    margin-bottom: 0.5rem;
+    margin-top:0px;
+    }
+
+  .people-choice-1mg{
+    padding: 1vw 2vw 2vw 2vw;
+    background-color: #FDEDBE;
+    border-radius: 12px;
+    max-width: 85%;
+    margin: 0 auto;
+    margin-bottom: 4vw;
+}
+.people-choice-1mg-img {
+    max-width: 17%;
+    margin: 0;
+}
+.people-choice-1mg-text {
+    font-size: 1.2vw;
+    color: #72582e;
+    margin-top: 0.5vw;
+}
+   
+
+
+
+
+
+.prepare-panic{
+    margin: 0 auto;
+    padding: 0 0px;
+    max-width: 100%;
+    background-color: #FEF7EF;
+}
+.prepare-panic-header-margin{
+    padding: 2vw 0;
+    width: 85%;
+    margin: 0 auto;
+}
+.prepare-panic-header-margin-flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 10px;
+}
+.prepare-panic-para{
+position: relative;
+width: 100%;
+min-height: 1px;
+padding-right: 15px;
+padding-left: 15px;
+}
+.prepare-panic-head{
+    font-size: 2.6vw;
+    font-weight: 700;
+    line-height: 1.4;
+    padding-top: 8px;
+    color: #3b3b3b;
+}
+.prepare-panic-para{
+    font-size: 1.25vw;
+    padding-top: 8px;
+    line-height: 1.4;
+    color: #767676;
+}
+/* .covid-19-test-bar{
+    margin:0px auto;
+    padding:0px;
+    max-width:100%;
+    background-color: #FEF7EF;
+}
+.covid-19-test-bar-margin{
+    padding: 2vw 0;
+    width: 85%;
+    margin: 0 auto;
+} 
+*/
