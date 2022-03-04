@@ -2,14 +2,25 @@ import { topHeader, searchBox, links } from "../components/header/navbar.js";
 import showList from "../components/header/index.js";
 import changeLinkColor from "../scripts/changeLinkColor.js";
 import footer from "../components/footer/footer.js";
-
+import { login, signup } from "../components/login/login.js";
+import {
+	loginOn,
+	signupOn,
+	loginOff,
+	signupOff,
+} from "../scripts/loginSignup.js";
 // Navbar Import section
 document.querySelector(".header-sec-1").innerHTML = await topHeader();
 document.querySelector(".search-box").innerHTML = await searchBox();
 document.querySelector(".links-box").innerHTML = await links();
-
+document.querySelector(".login-overlay").innerHTML = await login();
+document.querySelector(".signup-overlay").innerHTML = await signup();
 changeLinkColor();
 window.hide = hide;
+window.loginOn = loginOn;
+window.signupOn = signupOn;
+window.loginOff = loginOff;
+window.signupOff = signupOff;
 document.getElementById("location").addEventListener("click", showList);
 
 function hide() {
@@ -25,11 +36,17 @@ function hide() {
 importDB();
 async function importDB() {
 	let DB = await (await fetch("../json/database.json")).json();
-	featureBrands(DB.FeatureBrand);
 	healthCheckup(DB.data);
+	featureBrands(DB.FeatureBrand);
+	topSeller(DB.topSeller);
+	tataProduct(DB.topSeller);
+	multiVitamin(DB.topSeller);
+	trending(DB.topSeller);
+	explore(DB.topSeller);
+	popularCategory(DB.FeatureBrand);
+	healthConcern(DB.shopByHealthConcerns);
 	pathologyTest(DB.data);
 	radiologyTest(DB.data);
-	healthConcern(DB.shopByHealthConcerns);
 }
 
 //Full Body Health Checkups
@@ -142,7 +159,384 @@ function featureBrands(data) {
 		// right_arrow.style.display = "block";
 	}
 }
+// Top Seller
+function topSeller(data) {
+	let slider = document.querySelector("#top-seller");
+	// main div
 
+	data.forEach((ele) => {
+		let card = document.createElement("div");
+		card.className = "card";
+		// image div
+		let img_holder = document.createElement("div");
+		img_holder.className = "img-holder";
+
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		img_holder.appendChild(image);
+
+		// item name
+		let item_name = document.createElement("p");
+		item_name.innerHTML = `${ele.item_name}`;
+		// item count
+		let item_count = document.createElement("p");
+
+		item_count.innerHTML = `${ele.item_count}`;
+		item_count.style.marginBottom = "5px";
+		// rating div
+		let rating = document.createElement("div");
+		rating.className = "rating";
+		rating.style.marginTop = "0";
+		let ratings = document.createElement("span");
+		ratings.textContent = `${ele.ratings}`;
+		let star_img = document.createElement("img");
+		star_img.src = "./image/star.png";
+		let rating_no = document.createElement("div");
+
+		let no_of_rating = document.createElement("p");
+		no_of_rating.style.color = "black";
+		no_of_rating.style.width = "150px";
+		no_of_rating.style.height = "50px";
+		no_of_rating.innerHTML = `${ele.no_of_ratings}`;
+		no_of_rating.style.marginTop = "0";
+		rating_no.appendChild(no_of_rating);
+		rating.append(ratings, star_img, rating_no);
+
+		let item_price = document.createElement("div");
+		item_price.className = "itemPrice";
+
+		let actual_price = document.createElement("p");
+		actual_price.className = "actualPrice";
+		actual_price.style.width = "100%";
+		actual_price.innerHTML = `MRP `;
+		let actual_price_strike = document.createElement("strike");
+		actual_price_strike.textContent = `${ele.actual_price}`;
+
+		let off = document.createElement("span");
+		off.innerHTML = `${ele.off}`;
+		off.style.color = "green";
+		actual_price.append(actual_price_strike, off);
+
+		item_price.append(actual_price);
+		let current_price = document.createElement("div");
+		current_price.innerHTML = `${ele.current_price}`;
+
+		card.append(
+			img_holder,
+			item_name,
+			item_count,
+			rating,
+			item_price,
+			current_price
+		);
+
+		slider.append(card);
+	});
+	window.topSlideR = slideRight;
+	window.topSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[2];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
+// Popular Category slide
+function popularCategory(data) {
+	let slider = document.getElementById("popular-category");
+
+	data.forEach((ele) => {
+		let brand_item = document.createElement("div");
+		brand_item.className = "brand-item";
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		let name = document.createElement("p");
+		name.innerHTML = `${ele.title}`;
+
+		brand_item.append(image, name);
+		slider.append(brand_item);
+	});
+	window.popularSlideR = slideRight;
+	window.popularSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[3];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
+
+// Tata 1mg health products
+function tataProduct(data) {
+	let slider = document.querySelector("#tata-products");
+	// main div
+
+	data.forEach((ele) => {
+		let card = document.createElement("div");
+		card.className = "card";
+		// image div
+		let img_holder = document.createElement("div");
+		img_holder.className = "img-holder";
+
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		img_holder.appendChild(image);
+
+		// item name
+		let item_name = document.createElement("p");
+		item_name.innerHTML = `${ele.item_name}`;
+		// item count
+		let item_count = document.createElement("p");
+
+		item_count.innerHTML = `${ele.item_count}`;
+		item_count.style.marginBottom = "5px";
+		// rating div
+		let rating = document.createElement("div");
+		rating.className = "rating";
+		rating.style.marginTop = "0";
+		let ratings = document.createElement("span");
+		ratings.textContent = `${ele.ratings}`;
+		let star_img = document.createElement("img");
+		star_img.src = "./image/star.png";
+		let rating_no = document.createElement("div");
+
+		let no_of_rating = document.createElement("p");
+		no_of_rating.style.color = "black";
+		no_of_rating.style.width = "150px";
+		no_of_rating.style.height = "50px";
+		no_of_rating.innerHTML = `${ele.no_of_ratings}`;
+		no_of_rating.style.marginTop = "0";
+		rating_no.appendChild(no_of_rating);
+		rating.append(ratings, star_img, rating_no);
+
+		let item_price = document.createElement("div");
+		item_price.className = "itemPrice";
+
+		let actual_price = document.createElement("p");
+		actual_price.className = "actualPrice";
+		actual_price.style.width = "100%";
+		actual_price.innerHTML = `MRP `;
+		let actual_price_strike = document.createElement("strike");
+		actual_price_strike.textContent = `${ele.actual_price}`;
+
+		let off = document.createElement("span");
+		off.innerHTML = `${ele.off}`;
+		off.style.color = "green";
+		actual_price.append(actual_price_strike, off);
+
+		item_price.append(actual_price);
+		let current_price = document.createElement("div");
+		current_price.innerHTML = `${ele.current_price}`;
+
+		card.append(
+			img_holder,
+			item_name,
+			item_count,
+			rating,
+			item_price,
+			current_price
+		);
+
+		slider.append(card);
+	});
+	window.tataSlideR = slideRight;
+	window.tataSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[4];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
+// Multivitamin Products
+function multiVitamin(data) {
+	let slider = document.querySelector("#multi-vitamin-products");
+	// main div
+
+	data.forEach((ele) => {
+		let card = document.createElement("div");
+		card.className = "card";
+		// image div
+		let img_holder = document.createElement("div");
+		img_holder.className = "img-holder";
+
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		img_holder.appendChild(image);
+
+		// item name
+		let item_name = document.createElement("p");
+		item_name.innerHTML = `${ele.item_name}`;
+		// item count
+		let item_count = document.createElement("p");
+
+		item_count.innerHTML = `${ele.item_count}`;
+		item_count.style.marginBottom = "5px";
+		// rating div
+		let rating = document.createElement("div");
+		rating.className = "rating";
+		rating.style.marginTop = "0";
+		let ratings = document.createElement("span");
+		ratings.textContent = `${ele.ratings}`;
+		let star_img = document.createElement("img");
+		star_img.src = "./image/star.png";
+		let rating_no = document.createElement("div");
+
+		let no_of_rating = document.createElement("p");
+		no_of_rating.style.color = "black";
+		no_of_rating.style.width = "150px";
+		no_of_rating.style.height = "50px";
+		no_of_rating.innerHTML = `${ele.no_of_ratings}`;
+		no_of_rating.style.marginTop = "0";
+		rating_no.appendChild(no_of_rating);
+		rating.append(ratings, star_img, rating_no);
+
+		let item_price = document.createElement("div");
+		item_price.className = "itemPrice";
+
+		let actual_price = document.createElement("p");
+		actual_price.className = "actualPrice";
+		actual_price.style.width = "100%";
+		actual_price.innerHTML = `MRP `;
+		let actual_price_strike = document.createElement("strike");
+		actual_price_strike.textContent = `${ele.actual_price}`;
+
+		let off = document.createElement("span");
+		off.innerHTML = `${ele.off}`;
+		off.style.color = "green";
+		actual_price.append(actual_price_strike, off);
+
+		item_price.append(actual_price);
+		let current_price = document.createElement("div");
+		current_price.innerHTML = `${ele.current_price}`;
+
+		card.append(
+			img_holder,
+			item_name,
+			item_count,
+			rating,
+			item_price,
+			current_price
+		);
+
+		slider.append(card);
+	});
+	window.vitaminSlideR = slideRight;
+	window.vitaminSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[5];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
+// Explore Something new
+function explore(data) {
+	let slider = document.querySelector("#explore-products");
+	// main div
+
+	data.forEach((ele) => {
+		let card = document.createElement("div");
+		card.className = "card";
+		// image div
+		let img_holder = document.createElement("div");
+		img_holder.className = "img-holder";
+
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		img_holder.appendChild(image);
+
+		// item name
+		let item_name = document.createElement("p");
+		item_name.innerHTML = `${ele.item_name}`;
+		// item count
+		let item_count = document.createElement("p");
+
+		item_count.innerHTML = `${ele.item_count}`;
+		item_count.style.marginBottom = "5px";
+		// rating div
+		let rating = document.createElement("div");
+		rating.className = "rating";
+		rating.style.marginTop = "0";
+		let ratings = document.createElement("span");
+		ratings.textContent = `${ele.ratings}`;
+		let star_img = document.createElement("img");
+		star_img.src = "./image/star.png";
+		let rating_no = document.createElement("div");
+
+		let no_of_rating = document.createElement("p");
+		no_of_rating.style.color = "black";
+		no_of_rating.style.width = "150px";
+		no_of_rating.style.height = "50px";
+		no_of_rating.innerHTML = `${ele.no_of_ratings}`;
+		no_of_rating.style.marginTop = "0";
+		rating_no.appendChild(no_of_rating);
+		rating.append(ratings, star_img, rating_no);
+
+		let item_price = document.createElement("div");
+		item_price.className = "itemPrice";
+
+		let actual_price = document.createElement("p");
+		actual_price.className = "actualPrice";
+		actual_price.style.width = "100%";
+		actual_price.innerHTML = `MRP `;
+		let actual_price_strike = document.createElement("strike");
+		actual_price_strike.textContent = `${ele.actual_price}`;
+
+		let off = document.createElement("span");
+		off.innerHTML = `${ele.off}`;
+		off.style.color = "green";
+		actual_price.append(actual_price_strike, off);
+
+		item_price.append(actual_price);
+		let current_price = document.createElement("div");
+		current_price.innerHTML = `${ele.current_price}`;
+
+		card.append(
+			img_holder,
+			item_name,
+			item_count,
+			rating,
+			item_price,
+			current_price
+		);
+
+		slider.append(card);
+	});
+	window.exploreSlideR = slideRight;
+	window.exploreSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[6];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
 // Shop by health concern
 function healthConcern(data) {
 	let slider = document.getElementById("health-concern");
@@ -162,7 +556,94 @@ function healthConcern(data) {
 	window.healthConcernSlideR = slideRight;
 	window.healthConcernSlideL = slideLeft;
 	function slideRight() {
-		let left_arrow = document.querySelectorAll(".leftArrow")[1];
+		let left_arrow = document.querySelectorAll(".leftArrow")[7];
+		slider.scrollLeft += 1200;
+		left_arrow.style.display = "block";
+	}
+
+	function slideLeft() {
+		slider.scrollLeft -= 1200;
+		// right_arrow.style.display = "block";
+	}
+}
+// <!-- Trending products -->
+function trending(data) {
+	let slider = document.querySelector("#trending-products");
+	// main div
+
+	data.forEach((ele) => {
+		let card = document.createElement("div");
+		card.className = "card";
+		// image div
+		let img_holder = document.createElement("div");
+		img_holder.className = "img-holder";
+
+		let image = document.createElement("img");
+		image.src = `${ele.image}`;
+
+		img_holder.appendChild(image);
+
+		// item name
+		let item_name = document.createElement("p");
+		item_name.innerHTML = `${ele.item_name}`;
+		// item count
+		let item_count = document.createElement("p");
+
+		item_count.innerHTML = `${ele.item_count}`;
+		item_count.style.marginBottom = "5px";
+		// rating div
+		let rating = document.createElement("div");
+		rating.className = "rating";
+		rating.style.marginTop = "0";
+		let ratings = document.createElement("span");
+		ratings.textContent = `${ele.ratings}`;
+		let star_img = document.createElement("img");
+		star_img.src = "./image/star.png";
+		let rating_no = document.createElement("div");
+
+		let no_of_rating = document.createElement("p");
+		no_of_rating.style.color = "black";
+		no_of_rating.style.width = "150px";
+		no_of_rating.style.height = "50px";
+		no_of_rating.innerHTML = `${ele.no_of_ratings}`;
+		no_of_rating.style.marginTop = "0";
+		rating_no.appendChild(no_of_rating);
+		rating.append(ratings, star_img, rating_no);
+
+		let item_price = document.createElement("div");
+		item_price.className = "itemPrice";
+
+		let actual_price = document.createElement("p");
+		actual_price.className = "actualPrice";
+		actual_price.style.width = "100%";
+		actual_price.innerHTML = `MRP `;
+		let actual_price_strike = document.createElement("strike");
+		actual_price_strike.textContent = `${ele.actual_price}`;
+
+		let off = document.createElement("span");
+		off.innerHTML = `${ele.off}`;
+		off.style.color = "green";
+		actual_price.append(actual_price_strike, off);
+
+		item_price.append(actual_price);
+		let current_price = document.createElement("div");
+		current_price.innerHTML = `${ele.current_price}`;
+
+		card.append(
+			img_holder,
+			item_name,
+			item_count,
+			rating,
+			item_price,
+			current_price
+		);
+
+		slider.append(card);
+	});
+	window.trendingSlideR = slideRight;
+	window.trendingSlideL = slideLeft;
+	function slideRight() {
+		let left_arrow = document.querySelectorAll(".leftArrow")[8];
 		slider.scrollLeft += 1200;
 		left_arrow.style.display = "block";
 	}
@@ -241,7 +722,7 @@ function pathologyTest(data) {
 	window.PathologySlideR = slideRight;
 	window.PathologySlideL = slideLeft;
 	function slideRight() {
-		let left_arrow = document.querySelectorAll(".leftArrow")[1];
+		let left_arrow = document.querySelectorAll(".leftArrow")[9];
 		slider.scrollLeft += 1200;
 		left_arrow.style.display = "block";
 	}
@@ -320,7 +801,7 @@ function radiologyTest(data) {
 	window.RadiologySlideR = slideRight;
 	window.RadiologySlideL = slideLeft;
 	function slideRight() {
-		let left_arrow = document.querySelectorAll(".leftArrow")[2];
+		let left_arrow = document.querySelectorAll(".leftArrow")[10];
 		slider.scrollLeft += 1200;
 		left_arrow.style.display = "block";
 	}
@@ -330,5 +811,7 @@ function radiologyTest(data) {
 		// right_arrow.style.display = "block";
 	}
 }
+
+// <!-- Ayurveda -->
 // Footer section
 document.querySelector(".footer").innerHTML = await footer();
