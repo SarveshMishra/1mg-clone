@@ -2,14 +2,25 @@ import { topHeader, searchBox, links } from "../components/header/navbar.js";
 import showList from "../components/header/index.js";
 import changeLinkColor from "../scripts/changeLinkColor.js";
 import footer from "../components/footer/footer.js";
-
+import { login, signup } from "../components/login/login.js";
+import {
+	loginOn,
+	signupOn,
+	loginOff,
+	signupOff,
+} from "../scripts/loginSignup.js";
 // Navbar Import section
 document.querySelector(".header-sec-1").innerHTML = await topHeader();
 document.querySelector(".search-box").innerHTML = await searchBox();
 document.querySelector(".links-box").innerHTML = await links();
-
+document.querySelector(".login-overlay").innerHTML = await login();
+document.querySelector(".signup-overlay").innerHTML = await signup();
 changeLinkColor();
 window.hide = hide;
+window.loginOn = loginOn;
+window.signupOn = signupOn;
+window.loginOff = loginOff;
+window.signupOff = signupOff;
 document.getElementById("location").addEventListener("click", showList);
 
 function hide() {
