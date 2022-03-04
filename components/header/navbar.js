@@ -1,5 +1,5 @@
 async function topHeader() {
-  return `
+	return `
         <div class="logo">
           <img src="./image/tata_1mg_logo.svg" alt="1mg-logo" />
         </div>
@@ -28,7 +28,7 @@ async function topHeader() {
           </li>
         </ul>
         <div class="header-right-part">
-          <div class="login"><a href="">Login</a>|<a href="">Sign Up</a></div>
+          <div class="login"><span onclick="loginOn()">Login</span> | <span onclick="signupOn()">Sign Up</span></div>
           <div class="offers"><a href="">Offers</a></div>
           <div class="cart">
             <img src="./image/cart-icon-rebrand_vp4k0f.svg" alt="cart-icon" />
@@ -46,7 +46,7 @@ async function topHeader() {
 }
 
 async function searchBox() {
-  return `  
+	return `  
         <div class="left-input-container">
           <div class="location-picker">
             <span id="location-dot"><i class="fa fa-map-marker"></i></span>
@@ -103,7 +103,7 @@ async function searchBox() {
 }
 
 async function links() {
-  return `
+	return `
         <ul>
           <li>
             <div class="link">

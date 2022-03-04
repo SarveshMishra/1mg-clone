@@ -1,7 +1,10 @@
 export default function changeLinkColor() {
 	let url = window.location.href;
 
-	if (url == `https://1mg-clone.netlify.app/`) {
+	if (
+		url == `https://1mg-clone.netlify.app/` ||
+		url == `http://1mg-clone.netlify.app/index.html`
+	) {
 		document.querySelector("#home-page").style.color = "#ff6f61";
 	} else if (url == `https://1mg-clone.netlify.app/labtest.html`) {
 		document.querySelector("#labtest-page").style.color = "#ff6f61";
