@@ -1,16 +1,17 @@
 #econsult-container{
     width:100%;
     background-color: white;
-}
-#econsult-container>div{
-    width: 85%;
-    margin:auto;
     display: flex;
     flex-direction: row;
     font-family: calibri;
     background-color: white;
     margin-top: 5%;
 }
+/* #econsult-container>div{
+    width: 85%;
+    margin:auto;
+   
+} */
 #search-container{
      width:55%  
 }
@@ -157,6 +158,7 @@
 .loading-container{
     width:100%;
     position: relative;
+    padding-top: 60px;
 }
 .loading-data-container{
     width:70%;
@@ -205,6 +207,7 @@
     width:70%;
     margin:auto;
     text-align: center;
+    position: relative;
 }
 
 .h-customer-slide{
@@ -213,11 +216,13 @@
 }
 
 .h-customer-slide div{
+    margin: auto;
     text-align: center;
     color: #757575;
     font-size: 18px;
-    width: 100%;
-    padding-top: 40px;
+    width: 80%;
+    padding:50px 50px 0 50px;
+    
 
 }
 
@@ -252,6 +257,28 @@
     background-color:#bbb ;
 }
 
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(255,111,97);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+  }
+  .prev{
+      left:0;
+  }
+
+/* 
 #slider {
     padding-top:2%;
     margin: 0 auto;
@@ -453,4 +480,4 @@
     line-height: 200px;
     font-size: 90px;
     color: beige;
-}
+} */
