@@ -6,6 +6,133 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<link rel="stylesheet" href="./login.css" />
+		<style>
+			#lslider {
+	   margin: 0 auto;
+	   width: 800px;
+	   max-width: 100%;
+	   text-align: center;
+	}
+	#lslider input[type=radio] {
+	   display: none;
+	}
+	#lslider label {
+	   cursor:pointer;
+	   text-decoration: none;
+	}
+	#lslides {
+	   padding: 10px;
+	   width: 100%;
+	   
+	   
+	   
+	   position: relative;
+	   z-index: 1;
+	}
+	#loverflow {
+	   width: 100%;
+	   overflow: hidden;
+	}
+	#lslide1:checked ~ #lslides .linner {
+	   margin-left: 0;
+	}
+	#lslide2:checked ~ #lslides .linner {
+	   margin-left: -100%;
+	}
+	#lslide3:checked ~ #lslides .linner {
+	   margin-left: -200%;
+	}
+	#lslide4:checked ~ #lslides .linner {
+	   margin-left: -300%;
+	}
+	#lslides .linner {
+	   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	   width: 400%;
+	   line-height: 0;
+	   height: 300px;
+	}
+	#lslides .lslide {
+	   width: 25%;
+	   float:left;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	   height: 100%;
+	   color:black;
+	}
+	#lslides .lslide_1 {
+	   background:#FBFBFB;;
+	   ;
+	}
+	#lslides .lslide_2 {
+	   background:#FBFBFB;;
+	}
+	#lslides .lslide_3 {
+	   background: #FBFBFB;;;
+	}
+	#lslides .lslide_4 {
+	   background: #FBFBFB;;;
+	}
+	#lcontrols {
+	   margin: -180px 0 0 0;
+	   width: 100%;
+	   height: 50px;
+	   z-index: 3;
+	   position: relative;
+	}
+	#lcontrols label {
+	   transition: opacity 0.2s ease-out;
+	   display: none;
+	   width: 50px;
+	   height: 50px;
+	   opacity: .4;
+	}
+	#lcontrols label:hover {
+	   opacity: 1;
+	}
+	#lslide1:checked ~ #lcontrols label:nth-child(2),
+	#lslide2:checked ~ #lcontrols label:nth-child(3),
+	#lslide3:checked ~ #lcontrols label:nth-child(4),
+	#lslide4:checked ~ #lcontrols label:nth-child(1) {
+	   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+	   float:right;
+	   margin: 0 -50px 0 0;
+	   display: block;
+	}
+	#lslide1:checked ~ #lcontrols label:nth-last-child(2),
+	#lslide2:checked ~ #lcontrols label:nth-last-child(3),
+	#lslide3:checked ~ #lcontrols label:nth-last-child(4),
+	#lslide4:checked ~ #lcontrols label:nth-last-child(1) {
+	   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+	   float:left;
+	   margin: 0 0 0 -50px;
+	   display: block;
+	}
+	#lbullets {
+	   margin: 150px 0 0;
+	   text-align: center;
+	}
+	#lbullets label {
+	   display: inline-block;
+	   width: 10px;
+	   height: 10px;
+	   border-radius:100%;
+	   background: #ccc;
+	   margin: 0 10px;
+	}
+	#lslide1:checked ~ #lbullets label:nth-child(1),
+	#lslide2:checked ~ #lbullets label:nth-child(2),
+	#lslide3:checked ~ #lbullets label:nth-child(3),
+	#lslide4:checked ~ #lbullets label:nth-child(4) {
+	   background: gray;
+	}
+	
+	   #lslides {
+		  max-width: calc(100% - 140px);
+		  margin: 0 auto;
+	   }
+		</style>
+		
 	</head>
 	<body>
 		<div id="overlay" onclick="off()">
@@ -13,7 +140,73 @@
 		</div>
 
 		<div class="login-container">
-			<div class="left-part"></div>
+			<div class="left-part">
+			<div id="lslider">
+				<input type="radio" name="lslider" id="lslide1" checked>
+				<input type="radio" name="lslider" id="lslide2">
+				<input type="radio" name="lslider" id="lslide3">
+				<input type="radio" name="lslider" id="lslide4">
+				<div id="lslides">
+				   <div id="loverflow">
+					  <div class="linner">
+						 <div class="lslide slide_1">
+							<div class="lslide-content">
+							   
+							   <img src=""> 
+							   
+							   <h4> Make Healthcare Simpler</h4>
+							   <p>Get medicine information, order medicines, book lab
+								tests and consult doctors online from the comfort of
+								your home.</p>
+								
+							</div>
+						 </div>
+						 <div class="lslide slide_2">
+							<div class="lslide-content">
+								<img src="">
+								<h4> Know your medicines</h4>
+								
+									<p>Get medicine information, order medicines, book lab
+									 tests and consult doctors online from the comfort of
+									 your home.</p>
+							</div>
+						 </div>
+						 <div class="lslide slide_3">
+							<div class="lslide-content">
+								<img src="">
+								<h4> Medicines, Home Delivered </h4>
+								
+									<p>Order any medicine or health product and we'll deliver
+										it for free. Enjoy discounts on everything.</p>
+							</div>
+						 </div>
+						 <div class="lslide slide_4">
+							<div class="lslide-content">
+								<img src="">
+								<h4>  Lab Tests at Home</h4>
+								
+									<p>Book any test from any lab. We'll collect the sample
+										and send the reports. Save up to 809 every time.</p>
+							</div>
+						 </div>
+					  </div>
+				   </div>
+				</div>
+				<div id="lcontrols">
+				   <label for="lslide1"></label>
+				   <label for="lslide2"></label>
+				   <label for="lslide3"></label>
+				   <label for="lslide4"></label>
+				</div>
+				<div id="lbullets">
+				   <label for="lslide1"></label>
+				   <label for="lslide2"></label>
+				   <label for="lslide3"></label>
+				   <label for="lslide4"></label>
+				</div>
+			 </div>
+			</div>
+
 			<div class="right-part">
 				<div class="cross" onclick="off()">X</div>
 				<h1>Sign up</h1>
