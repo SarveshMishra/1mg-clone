@@ -32,10 +32,11 @@ async function topHeader() {
           <div class="offers"><a href="">Offers</a></div>
           <div class="cart">
             <img src="./image/cart-icon-rebrand_vp4k0f.svg" alt="cart-icon" />
+            <div id="cart-icon"></div>
             <div class="cart-content">
               <div class="order-count">
                 <div>Order Summary</div>
-                <div class="count">0 Item</div>
+                <div class="count" id="cart_count">0 Item</div>
               </div>
               <div class="cart-link"><a href="./cart.html" target="_blank">PROCEED TO CART</a></div>
             </div>
