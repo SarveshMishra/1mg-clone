@@ -142,9 +142,11 @@
 }
 .imgIcon{
 
+
     
     height: 30px;
     width: 40px;
+
 
     margin-top: 2%;
     padding-right: 3%;
@@ -403,11 +405,11 @@
      margin-top: 3%;
      margin-bottom: 3%;
 
+
      text-align: center;
      
 
  } 
-
 
  #contact-us{
     font-size: .875rem;
@@ -431,6 +433,7 @@
      
      align-items: center;
      margin-top: 3%;
+
 
      
      margin-left: 250px;
@@ -472,11 +475,13 @@
 
 #Popular-package-button{
 
+
     font-size: .875rem;
     margin-top: 3%;
     width: 220px;
 
    
+
 
     border-radius: 5px;
     border-color:#ff6f61;
@@ -501,7 +506,4 @@
 .ltVideoflex{
     display: flex;
 }
-
-
-
 

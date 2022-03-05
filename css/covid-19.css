@@ -150,3 +150,123 @@ padding-left: 15px;
     margin: 0 auto;
 } 
 */
+
+
+/* youtube section */
+
+.youtube-sec-c{
+    padding-bottom:40px;
+    margin-top:64px;
+    margin-bottom:0px;
+    margin-left:114px;
+    margin-right:114px;
+    background-color: rgb(255,240,227);
+}
+.Qna-on-yt{
+    padding:40px 20px 20px 40px;
+    margin-bottom:8px;
+    font-weight:500px;
+    line-height:1.4;
+    font-size:2.4vw;
+}
+.yt-grid1{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:1rem;
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+
+.yt-grid1-vedio{
+    padding-left:40px;
+    padding-right:10px;
+}
+.yt-grid1-vedio-iframe{
+    width:100%;
+    height:auto;
+    min-height: 300px;
+    padding:0px;
+    margin:0px;
+}
+.yt-grid1-vedio2{
+    padding-left:10px;
+    padding-right:40px;
+}
+
+.yt-grid2{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-gap:1rem;
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+
+.yt-grid2-vedio{
+    padding-left:40px;
+     padding-right:10px;
+}
+
+.yt-grid2-vedio-iframe{
+    width:100%;
+    height:auto;
+    min-height: 300px;
+    padding:0px;
+    margin:0px;
+}
+
+.yt-grid2-vedio2{
+padding-left:10px;
+ padding-right:40px;
+}
+
+
+/* bottom banner section started just inside youtube */
+/* 
+.banner-margin{
+ margin:64px 114px 0px 114px;
+}
+.banner-margin-insideRadius{
+    border-radius: 8px;
+    background-color: #fff0e3;
+}
+.banner-flexbox{
+    margin:10px -15px 0px -15px;
+    display:flex;
+    flex-wrap: nowrap;
+}
+.banner-alltextArea{
+padding-left:15px;
+padding-right:15px;
+position: relative;
+    width: 100%;
+    min-height: 1px
+    align-self:center!important
+}
+.banner-heading{
+    font-size: 2.2vw;
+    padding: 0 0 0 2vw;
+    color: #3b3b3b;
+    font-weight: 700;
+    line-height: 1.4;
+}
+.banner-text{
+    font-size: 1.8vw;
+    padding: 0 0 0 2vw;
+    color: #3b3b3b;
+}
+.banner-consultant{
+    padding-left: 2vw;
+    padding-top: 2vw;
+    max-width: 50%;
+}
+.banner-imgArea{
+    padding-left:15px;
+    padding-right:15px;
+    align-self:center!important;
+}
+.btnt{
+   background-color:rgb(255,111,97);
+   border:2px solid grey;
+} */
