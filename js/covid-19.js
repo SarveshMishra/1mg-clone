@@ -22,7 +22,18 @@ window.signupOff = signupOff;
 window.hide = hide;
 changeLinkColor();
 document.getElementById("location").addEventListener("click", showList);
-
+// CArt Section
+update_cart_count();
+function update_cart_count() {
+	if (localStorage.getItem("cart-count") == null) {
+		document.getElementById("cart_count").innerHTML = ` 0 Item`;
+	} else {
+		let cart_count = localStorage.getItem("cart-count");
+		console.log(cart_count);
+		document.getElementById("cart_count").innerHTML = `${cart_count} Item`;
+		document.getElementById("cart-icon").innerHTML = `${cart_count}`;
+	}
+}
 function hide() {
 	let container = document.querySelector(".location-selection ");
 	document.addEventListener("mouseup", function (e) {
