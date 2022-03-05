@@ -81,6 +81,15 @@
     float: right;
     margin-top: 30px;
 }
+.go-to-cart{
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff6f61;
+    cursor: pointer;
+    float: right;
+    margin-top: 30px;
+    display: none;
+}
 
 
 /* package details */

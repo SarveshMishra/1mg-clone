@@ -44,16 +44,34 @@ function displaypackage(){
     let add_to_cart=document.createElement('h2');
     add_to_cart.className='add-to-cart';
     add_to_cart.textContent="ADD TO CART";
+    let go_to_cart=document.createElement('h2');
+    go_to_cart.className='go-to-cart';
+    go_to_cart.textContent="GO TO CART";
 
-   add_to_cart.addEventListener('click',function(){
+    if(localStorage.getItem('cart')==null){
+      localStorage.setItem('cart',JSON.stringify([]));
+    }
+    // }else if(checkAvailableInCart==true){
+    //   go_to_cart.style.display='block';
+    //   add_to_cart.style.display='none';
+    // }else{
+    //   add_to_cart.style.display='block';
+    //   go_to_cart.style.display='none';
+    // }
 
-        if(localStorage.getItem('cart')==null){
-          localStorage.setItem('cart',JSON.stringify([]));
-        }
-        let old_cart=JSON.parse(localStorage.getItem('cart'));
-        old_cart.push(packageitem);
-        localStorage.setItem('cart',JSON.stringify(old_cart));
-        
+    
+      // go_to_cart.addEventListener('click',function(){
+      //   window.open('cart.html','_blank');
+      // });
+    
+  
+    
+      add_to_cart.addEventListener('click',function(){
+          let old_cart=JSON.parse(localStorage.getItem('cart'));
+          old_cart.push(packageitem);
+          localStorage.setItem('cart',JSON.stringify(old_cart));
+          go_to_cart.style.display='block';
+     
    });
 
     let overview_heading=document.createElement('h2');
@@ -88,6 +106,16 @@ function displaypackage(){
     package_details.append(item,overview_heading,overview_detail);
 }
 
+
+function checkAvailableInCart(){
+  let cart=JSON.parse(localStorage.getItem('cart'));
+  cart.forEach(function(ele){
+    if(packageitem.title==ele.title){
+      return true;
+    }
+  });
+  return false;
+}
 
 function addingCart(){
   let cart=localStorage.getItem('cart');
