@@ -19,7 +19,18 @@ window.loginOff = loginOff;
 window.signupOff = signupOff;
 // Body section
 changeLinkColor();
-
+// CArt Section
+update_cart_count();
+function update_cart_count() {
+	if (localStorage.getItem("cart-count") == null) {
+		document.getElementById("cart_count").innerHTML = ` 0 Item`;
+	} else {
+		let cart_count = localStorage.getItem("cart-count");
+		console.log(cart_count);
+		document.getElementById("cart_count").innerHTML = `${cart_count} Item`;
+		document.getElementById("cart-icon").innerHTML = `${cart_count}`;
+	}
+}
 var slides = document.getElementsByClassName("h-customer-slide");
 var dots = document.getElementsByClassName("dot");
 var prevDot = "";
