@@ -56,14 +56,14 @@ h3 {
 	font-size: 20px;
 	color: rgb(78, 78, 78);
 }
-/* span ~ span {
+.cat-title > span ~ span {
 	background-color: rgb(255, 111, 97);
 	font-size: 14px;
 	padding: 3px;
 	border-radius: 3px;
 	float: right;
 	color: white;
-} */
+}
 .slider-container {
 	width: 100%;
 	background-color: rgb(255, 255, 255);
