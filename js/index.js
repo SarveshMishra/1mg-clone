@@ -105,16 +105,18 @@ function healthCheckup(data) {
 		actual_price_strike.textContent = " " + "₹" + ele.actualPrice;
 		actual_price.append(actual_price_strike);
 
+
 		let discount = document.createElement("div");
 		discount.className = "discount";
 		discount.textContent = ele.discount + "% off";
+		item_price.append(price, actual_price, discount);
+
 		item.addEventListener('click',function(){
 			localStorage.setItem('order_details',JSON.stringify(ele));
 			window.open("./packagedetails.html","_blank");
 						
 		});
-		item_price.append(price, actual_price, discount);
-
+		
 		item.append(item_heading, test_includes, tata_logo, item_price);
 		slider.append(item);
 	});
