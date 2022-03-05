@@ -50,7 +50,7 @@ async function importDB() {
 }
 
 //Full Body Health Checkups
-
+var exportdata='';
 function healthCheckup(data) {
 	var slider = document.querySelector("#full-body-health-checkup");
 	data.forEach(function (ele) {
@@ -108,6 +108,11 @@ function healthCheckup(data) {
 		let discount = document.createElement("div");
 		discount.className = "discount";
 		discount.textContent = ele.discount + "% off";
+		item.addEventListener('click',function(){
+			localStorage.setItem('order_details',JSON.stringify(ele));
+			window.open("./packagedetails.html","_blank");
+						
+		});
 		item_price.append(price, actual_price, discount);
 
 		item.append(item_heading, test_includes, tata_logo, item_price);
@@ -815,3 +820,5 @@ function radiologyTest(data) {
 // <!-- Ayurveda -->
 // Footer section
 document.querySelector(".footer").innerHTML = await footer();
+
+export {exportdata};
