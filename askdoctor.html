@@ -24,147 +24,184 @@
 		<link rel="stylesheet" href="./css/askdoctor.css" />
 		<link rel="stylesheet" href="./components/header/navbar.css" />
 		<link rel="stylesheet" href="./components/footer/footer.css" />
+		<link rel="stylesheet" href="./components/login/login.css" />
 	</head>
 	<body>
 		<!-- Navbar Section -->
 		<div class="navbar">
 			<div class="header-sec-1"></div>
 		</div>
-
+		<div class="login-overlay"></div>
+		<div class="signup-overlay"></div>
 		<!-- Slideshow Section -->
 
 		<div id="econsult-container">
 			<div>
-			  <div id="search-container">
-				<div class="searchHead">Consult with Doctors across 22+ Specialities,
-				  over <span>Chat, Video & Voice calls.</span></div>
-				<div class="subHead" >Skip the struggle of booking appointments.</div>
-				<div class="subHead">Consult a doctor at your ease</div>
-				<div class="cons-search-bar">
-				  <input class="cons-search-input" name="queryinput" required=""/>
-				  <!-- <lable for="queryinput" class="cons-input-Label">
+				<div id="search-container">
+					<div class="searchHead">
+						Consult with Doctors across 22+ Specialities, over
+						<span>Chat, Video & Voice calls.</span>
+					</div>
+					<div class="subHead">Skip the struggle of booking appointments.</div>
+					<div class="subHead">Consult a doctor at your ease</div>
+					<div class="cons-search-bar">
+						<input class="cons-search-input" name="queryinput" required="" />
+						<!-- <lable for="queryinput" class="cons-input-Label">
 					<span>I have<span id="query"></span></span>
 					<span class="cons-placeholder">Type your query</span>
 				  </label> -->
+					</div>
+					<button id="consult-now-button">CONSULT NOW</button>
+					<div class="ads">
+						<img
+							src="https://onemg.gumlet.io/image/upload/v1625554511/mqz0j8blegoylexsvtsl.png"
+						/>
+					</div>
 				</div>
-				<button id="consult-now-button">CONSULT NOW</button>
-				<div class="ads">
-				  <img src="https://onemg.gumlet.io/image/upload/v1625554511/mqz0j8blegoylexsvtsl.png"/>
+				<div id="chat-video-container">
+					<video width="552px" height="503px" autoplay playsinline muted loop>
+						<source src="./videos/econsult.webm" type="video/webm" />
+					</video>
 				</div>
-			  </div>
-			  <div id="chat-video-container">
-				<video width="552px" height="503px" autoplay playsinline muted loop>
-				  <source src="./videos/econsult.webm" type="video/webm">
-				</video>
-			  </div>
 			</div>
-		  </div>
+		</div>
 
 		<!-- Main Content -->
 		<div class="how-heading">
 			<h1>How Online Doctor Consultation Works?</h1>
 		</div>
 		<div class="how-container-right">
-			<img src="./image/How_it_Works_1.svg"/>
+			<img src="./image/How_it_Works_1.svg" />
 			<div>
-			  <div class="number">01</div>
-			  <div>
-				<h3>Start a Session</h3>
-				<p>Select the type of category you would like to consult with the doctor.</p>
-			  </div>
+				<div class="number">01</div>
+				<div>
+					<h3>Start a Session</h3>
+					<p>
+						Select the type of category you would like to consult with the
+						doctor.
+					</p>
+				</div>
 			</div>
 		</div>
 		<div class="how-container-left">
-		  <div>
-			<div class="number">02</div>
 			<div>
-			  <h3>Tell us what’s troubling you</h3>
-			  <p>Type in your concern and attach prescription, lab reports if any. Help doctor understand your case better.</p>
+				<div class="number">02</div>
+				<div>
+					<h3>Tell us what’s troubling you</h3>
+					<p>
+						Type in your concern and attach prescription, lab reports if any.
+						Help doctor understand your case better.
+					</p>
+				</div>
 			</div>
-		  </div>
-		  <img src="./image/How_it_works_2.svg"/>
+			<img src="./image/How_it_Works_2.svg" />
 		</div>
 		<div class="how-container-right">
-		  <img src="./image/How_it_Works_3.svg"/>
-		  <div>
-			<div class="number">03</div>
+			<img src="./image/How_it_works_3.svg" />
 			<div>
-			  <h3>Connect with the doctor</h3>
-			  <p>A doctor is auto-assigned to you that best matches your concern. You will get a diagnosis and treatment for your condition.</p>
-			</div>
-		  </div>
-	  </div>
-	  <div class="how-container-left">
-		<div>
-		  <div class="number">04</div>
-		  <div>
-			<h3>Follow up with your doctor</h3>
-			<p>Still, need more clarity? You can follow up with the doctor even after your chat window closes.</p>
-		  </div>
-		</div>
-		<img src="./image/How_it_Works_4.svg"/>
-	  </div>
-	  <div class="whitebackround">&nbsp;</div>
-	  
-	  <div class="loading-container">
-		<div class="loading-data-container">
-			<div class="loading-data">
-				<div>30L+</div>
-				<div>Total Consultations</div>
-			</div>
-			<div class="vertical-line"></div>
-			<div class="loading-data">
-				<div>3k+</div>
-				<div>Daily Consultations</div>
-			</div>
-			<div class="vertical-line"></div>
-			<div class="loading-data">
-				<div>22+</div>
-				<div>Specialities</div>
+				<div class="number">03</div>
+				<div>
+					<h3>Connect with the doctor</h3>
+					<p>
+						A doctor is auto-assigned to you that best matches your concern. You
+						will get a diagnosis and treatment for your condition.
+					</p>
+				</div>
 			</div>
 		</div>
-
-		<div class="happy-customer-container">
-			<div class="h-cust-heading">Our Happy Customers</div>
+		<div class="how-container-left">
+			<div>
+				<div class="number">04</div>
+				<div>
+					<h3>Follow up with your doctor</h3>
+					<p>
+						Still, need more clarity? You can follow up with the doctor even
+						after your chat window closes.
+					</p>
+				</div>
+			</div>
+			<img src="./image/How_it_Works_4.svg" />
 		</div>
+		<div class="whitebackround">&nbsp;</div>
 
-		<div class="h-customer-slide-container">
-			
-			<div class="h-customer-slide">
-				<div>Initially, I was a little skeptical of consulting a doctor online. But the consultation turned out to be honest and cool, the doctor's behavior was friendly. The best part is that I saved so much time and money!</div>
-				<div>Aarzoo</div>
-			</div>
-			<div class="h-customer-slide">
-				<div>Dr. Chakraborty is so concerned about his patient. I sincerely wish him the best. He always takes the time to understand the problem and on the basis of that he takes the decision and explains it very well. And if you miss out on anything, you can come back with more questions.</div>
-				<div>Yash</div>
-			</div>
-			<div class="h-customer-slide">
-				<div>I installed the app and went for a free consultation with a dietician. The advice given by Dr. Mirza was simply great. He shared a detailed diet chart and exercises with me which was easy to incorporate into my hectic schedule.</div>
-				<div>Aarohi</div>
-			</div>
-			<div class="h-customer-slide">
-				<div>Best app for consultation and the most effective way to connect with the doctor from anywhere. The doctor replies with great detail and is extremely polite. One can also come back to consult the same doctor anytime.</div>
-				<div>Aarohi</div>
-			</div>
-			<div class="h-customer-slide">
-				<div>Amazingly easy and convenient. Great service for the same price as a clinic visit, without the hassle of having to drive to the doctor's clinic. Couldn't be any happier.</div>
-				<div>Rahul</div>
+		<div class="loading-container">
+			<div class="loading-data-container">
+				<div class="loading-data">
+					<div>30L+</div>
+					<div>Total Consultations</div>
+				</div>
+				<div class="vertical-line"></div>
+				<div class="loading-data">
+					<div>3k+</div>
+					<div>Daily Consultations</div>
+				</div>
+				<div class="vertical-line"></div>
+				<div class="loading-data">
+					<div>22+</div>
+					<div>Specialities</div>
+				</div>
 			</div>
 
-			<div class="dot-container">
-				<div class="dot"></div> 
-				<div class="dot"></div> 
-				<div class="dot"></div> 
-				<div class="dot"></div> 
-				<div class="dot"></div> 
-			  </div>
+			<div class="happy-customer-container">
+				<div class="h-cust-heading">Our Happy Customers</div>
+			</div>
+
+			<div class="h-customer-slide-container">
+				<div class="h-customer-slide">
+					<div>
+						Initially, I was a little skeptical of consulting a doctor online.
+						But the consultation turned out to be honest and cool, the doctor's
+						behavior was friendly. The best part is that I saved so much time
+						and money!
+					</div>
+					<div>Aarzoo</div>
+				</div>
+				<div class="h-customer-slide">
+					<div>
+						Dr. Chakraborty is so concerned about his patient. I sincerely wish
+						him the best. He always takes the time to understand the problem and
+						on the basis of that he takes the decision and explains it very
+						well. And if you miss out on anything, you can come back with more
+						questions.
+					</div>
+					<div>Yash</div>
+				</div>
+				<div class="h-customer-slide">
+					<div>
+						I installed the app and went for a free consultation with a
+						dietician. The advice given by Dr. Mirza was simply great. He shared
+						a detailed diet chart and exercises with me which was easy to
+						incorporate into my hectic schedule.
+					</div>
+					<div>Aarohi</div>
+				</div>
+				<div class="h-customer-slide">
+					<div>
+						Best app for consultation and the most effective way to connect with
+						the doctor from anywhere. The doctor replies with great detail and
+						is extremely polite. One can also come back to consult the same
+						doctor anytime.
+					</div>
+					<div>Aarohi</div>
+				</div>
+				<div class="h-customer-slide">
+					<div>
+						Amazingly easy and convenient. Great service for the same price as a
+						clinic visit, without the hassle of having to drive to the doctor's
+						clinic. Couldn't be any happier.
+					</div>
+					<div>Rahul</div>
+				</div>
+
+				<div class="dot-container">
+					<div class="dot"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+					<div class="dot"></div>
+				</div>
+			</div>
 		</div>
-		
-		
-		
-
-
-	  </div>
 
 		<!-- Footer Section -->
 		<section class="footer"></section>
