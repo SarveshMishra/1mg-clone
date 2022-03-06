@@ -1,0 +1,46 @@
+.empty-cart {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.empty-cart > img {
+	width: 50%;
+	height: 50%;
+}
+
+.cart-display {
+	display: flex;
+	width: 50%;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	padding-left: 6%;
+	margin-bottom: 5%;
+	gap: 2em;
+}
+
+.address-form {
+	padding: 0 6%;
+	display: flex;
+	margin: auto;
+	justify-content: center;
+	flex-direction: column;
+	display: none;
+}
+.address-form input,
+textarea {
+	height: 50px;
+	width: 50%;
+	margin-top: 10px;
+}
+
+.address-form textarea {
+	height: 100px;
+}
+
+.checkout-btn {
+	margin-top: 10px;
+	margin-left: 0;
+	margin-bottom: 100px;
+}

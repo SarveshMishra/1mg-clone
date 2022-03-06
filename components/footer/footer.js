@@ -129,7 +129,7 @@ export default async function footer(){
               <ul> 
                   <!-- <h5 style="font-weight:700; font-size: 30px;">Download App</h5> -->
                   <li>
-                 <a href="https://play.google.com/store/apps/details?id=com.aranoah.healthkart.plus" target="_blank"> <div><img src="./image/Get it on play-store.png" height="40px"; width="135px"></div></a>
+                 <a href="https://play.google.com/store/apps/details?id=com.aranoah.healthkart.plus" target="_blank"> <div><img src="./image/Get it on play-store.png" height="48px"; width="135px"></div></a>
                   </li> 
                   <li>
                   <a href="https://apps.apple.com/in/app/1mg/id554578419" target="_blank"> <div><img src="./image/apple store.png" height="45px";width="140px"></div></a>
