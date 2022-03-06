@@ -50,9 +50,7 @@ function display(cart_item) {
 	}
 	let cart_container = document.querySelector(".cart-display");
 	cart_container.innerHTML = "";
-	let h4 = document.createElement("h4");
-	h4.innerHTML = `Your Cart`;
-	cart_container.appendChild(h4);
+
 	cart_item.forEach((ele) => {
 		let item = document.createElement("div");
 		item.className = "item";
