@@ -374,3 +374,32 @@ h3 {
 	vertical-align: middle;
 	color: #000;
 }
+
+/* Media Query */
+
+@media (max-width: 780px) {
+	.header-sec-1 {
+		display: flex;
+		/* flex-direction: column; */
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	#navbar-ul {
+		display: none;
+	}
+	.header-sec-1 ul {
+		visibility: hidden;
+		display: block;
+	}
+	.search-box {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.header-sec-1 .header-right-part {
+		visibility: hidden;
+		display: none;
+	}
+	#search-box-mobile {
+		display: none;
+	}
+}

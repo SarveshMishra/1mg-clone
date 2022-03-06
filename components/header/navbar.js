@@ -3,7 +3,7 @@ async function topHeader() {
         <div class="logo">
           <a id="home-page" href="./index.html"><img src="./image/tata_1mg_logo.svg" alt="1mg-logo" /></a>
         </div>
-        <ul>
+        <ul id="navbar-ul">
           <li>
             <div class="page-link" ><a id="home-page" href="./index.html">MEDICINES</a></div>
           </li>
