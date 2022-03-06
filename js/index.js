@@ -21,6 +21,7 @@ window.loginOn = loginOn;
 window.signupOn = signupOn;
 window.loginOff = loginOff;
 window.signupOff = signupOff;
+window.updateCity = updateCity;
 document.getElementById("location").addEventListener("click", showList);
 function hide() {
 	let container = document.querySelector(".location-selection ");
@@ -33,6 +34,11 @@ function hide() {
 let username = localStorage.getItem("username");
 if (username == null) {
 	username = "";
+}
+
+function updateCity(city) {
+	console.log(city);
+	document.querySelector("#location").value = city;
 }
 // Login Part
 let login_area = document.querySelector(".login");
@@ -51,6 +57,7 @@ function loginUser() {
 
 		loginOff();
 		login_area.innerHTML = `<span><img style="width: 20px" src="../image/user.svg" alt=""></span> <span id="logout">LogOut</span>`;
+		location.reload();
 	} else {
 		alert("Invalid Email Please Sign up first!!");
 		loginOff();

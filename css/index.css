@@ -302,6 +302,7 @@ h3 {
 	justify-content: center;
 	background-color: #fff;
 	border-bottom: 1px solid #cecece;
+	flex-wrap: wrap;
 }
 
 #moto {
@@ -317,7 +318,8 @@ h3 {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-	padding: 20px;
+	padding: 2%;
+	flex-wrap: wrap;
 }
 
 .count {
@@ -347,9 +349,10 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100px;
+	min-height: 100px;
 	font-size: 20px;
 	color: #111;
+	flex-wrap: wrap;
 }
 .app-download > div {
 	margin: 10px;
@@ -361,6 +364,7 @@ h3 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 }
 .app-download input {
 	outline: none;
@@ -401,5 +405,20 @@ h3 {
 	}
 	#search-box-mobile {
 		display: none;
+	}
+	.popular-data {
+		justify-content: flex-start;
+	}
+	.app-download .input > .upload-btn {
+		margin-top: 20px;
+	}
+	#moto {
+		font-size: 16px;
+		justify-content: center;
+	}
+	.banner {
+		width: 100%;
+		display: block;
+		height: 100%;
 	}
 }

@@ -65,17 +65,17 @@ async function searchBox() {
             <div class="location-selection">
               <ul>
                 <li>Top Cities</li>
-                <li>New Delhi</li>
-                <li>Gurgaon</li>
-                <li>Pune</li>
-                <li>Mumbai</li>
-                <li>Bengaluru</li>
-                <li>Kolkata</li>
-                <li>Hyderabad</li>
-                <li>Ahmedabad</li>
-                <li>Chennai</li>
-                <li>Indore</li>
-                <li>Lucknow</li>
+                <li onclick="updateCity("New Delhi")">New Delhi</li>
+                <li onclick="updateCity("Gurgaon")">Gurgaon</li>
+                <li onclick="updateCity("Pune")">Pune</li>
+                <li onclick="updateCity("Mumbai")">Mumbai</li>
+                <li onclick="updateCity("Bengaluru")">Bengaluru</li>
+                <li onclick="updateCity("Kolkata")">Kolkata</li>
+                <li onclick="updateCity("Hyderabad")">Hyderabad</li>
+                <li onclick="updateCity("Ahmedabad")">Ahmedabad</li>
+                <li onclick="updateCity("Chennai")">Chennai</li>
+                <li onclick="updateCity("Indore")">Indore</li>
+                <li onclick="updateCity("Lucknow")">Lucknow</li>
               </ul>
             </div>
           </div>
@@ -111,7 +111,7 @@ async function links() {
               <a href="#"><span>Health Resource Center</span></a
               ><i class="fa fa-angle-down drop-icon"></i>
               <div class="dropdown-content">
-                <a href="">All Diseases</a>
+                <a href="./allDisease.html" target="_blank">All Diseases</a>
                 <a href="">All Medicines</a>
                 <a href="">Medicine by Therapeutics Class</a>
               </div>
@@ -122,9 +122,13 @@ async function links() {
               <a href="#"><span>Covid Essentials</span></a
               ><i class="fa fa-angle-down drop-icon"></i>
               <div class="dropdown-content">
-                <a href="">All Diseases</a>
-                <a href="">All Medicines</a>
-                <a href="">Medicine by Therapeutics Class</a>
+                <a href="">Covid-19 Self test kits</a>
+		<a href=""> Oxygen Cans & Concentrators</a>
+		<a href=""> Masks </a>
+		<a href=""> Sanitizers & Handwash Products </a>
+		<a href=""> Boost Your Immunity </a>
+		<a href=""> Thermometer </a>
+		<a href=""> Chyawanprash</a>
               </div>
             </div>
           </li>
