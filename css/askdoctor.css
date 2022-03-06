@@ -1,18 +1,22 @@
+body{
+    background-color: white;
+}
 #econsult-container{
     width:100%;
     background-color: white;
-}
-#econsult-container>div{
-    width: 85%;
-    margin:auto;
     display: flex;
     flex-direction: row;
     font-family: calibri;
-    background-color: white;
-    margin-top: 5%;
+    padding: 5% 0 2% 10%;
+    box-sizing: border-box;
 }
+/* #econsult-container>div{
+    width: 85%;
+    margin:auto;
+   
+} */
 #search-container{
-     width:55%  
+     width:40%  
 }
 .searchHead{
     font-size: 33px;
@@ -69,10 +73,10 @@
     width:100%;
 }
 #chat-video-container{
-    width: 50%;
+    width: 40%;
     justify-content: flex-end;
     padding:0;
-    padding-left:10%;
+    padding-left:5%;
 }
 
 /* how container */
@@ -82,23 +86,25 @@
 }
 .how-heading>h1{
     margin:0;
-    padding:80px 0;
     font-size: 30px;
     font-weight: 700;
     color: rgb(158,158,158);
 }
 
 .how-container-right{
-    width:100%;
+    width:70%;
     display:flex;
-    padding:10px 18%;
+    padding-left: 50px;
+    margin:auto;
     background-color: white;
+    /* border: black solid 2px; */
+    margin-top: 30px;
 }
 .how-container-right>img{
-    width:25%
+    width:40%;
 }
 .how-container-right>img~div{
-    width:34%;
+    width:50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,13 +132,16 @@
 }
 
 .how-container-left{
-    width:100%;
+    width:70%;
     display:flex;
-    padding:10px 18%;
+    margin: auto;
     background-color: white;
+    /* border: black solid 2px; */
+    margin-top: 30px;
+
 }
 .how-container-left>div{
-    width:34%;
+    width:50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,11 +150,12 @@
 .how-container-left>div>.number{
     font-size: 64px;
     font-weight: bold;
-    padding-right: 4%;
     color: rgb(201,203,204);
+    padding-right: 4%;
+
 }
 .how-container-left>img{
-    width:25%;
+    width:35%;
 }
 
 /* loding data */
@@ -157,6 +167,7 @@
 .loading-container{
     width:100%;
     position: relative;
+    padding-top: 60px;
 }
 .loading-data-container{
     width:70%;
@@ -205,19 +216,22 @@
     width:70%;
     margin:auto;
     text-align: center;
+    position: relative;
 }
 
 .h-customer-slide{
     width:100%;
-    display:none;
+    display: none;
 }
 
 .h-customer-slide div{
+    margin: auto;
     text-align: center;
     color: #757575;
     font-size: 18px;
-    width: 100%;
-    padding-top: 40px;
+    width: 80%;
+    padding:50px 50px 0 50px;
+    
 
 }
 
@@ -251,6 +265,28 @@
 .dot-not-active{
     background-color:#bbb ;
 }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 30%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(255,111,97);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+  }
+  .prev{
+      left:0;
+  }
+
 
 #slider {
     padding-top:2%;
@@ -381,9 +417,9 @@
 
  
 
- *{
+ /* *{
     box-sizing: border-box;
-}
+} */
 
 
 .carousel{
@@ -453,4 +489,4 @@
     line-height: 200px;
     font-size: 90px;
     color: beige;
-}
+} 

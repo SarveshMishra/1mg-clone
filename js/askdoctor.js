@@ -19,6 +19,50 @@ window.loginOff = loginOff;
 window.signupOff = signupOff;
 // Body section
 changeLinkColor();
+// var slideI=1;
+// var prev=document.querySelectorAll('.prev');
+
+// prev[0].addEventListener('click',function(){
+// 	viewSlide(slideI +=(-1));
+// });
+// var next=document.querySelectorAll(".next");
+
+// next[0].addEventListener('click',function(){
+// 	viewSlide(slideI +=(-1));
+// });
+
+// let alldots=document.querySelectorAll(".dot");
+// let i=1;
+// alldots.forEach(function(ele){
+// 	ele.addEventListener('click',function(){
+// 		viewSlide(slideI=i);
+// 	});
+// 	i++;
+// });
+
+// function cSlide(n){
+// 	viewSlide(slideI=n);
+// }
+
+// function viewSlide(n){
+// 	var slides = document.getElementsByClassName("h-customer-slide");
+// 	var dots = document.getElementsByClassName("dot");
+// 	if(n>slides.length){
+// 		slideI=1;
+// 	}
+// 	if(n<1){
+// 		slideI=slides.length;
+// 	}
+// 	for(let i=0;i<slides.length;i++){
+// 		slides[i].style.display="none";
+// 		dots[i].className = dots[i].className.replace("dot-active", "");
+		
+// 	}
+// 	slides[slideI-1].style.display = "block";  
+//   	dots[slideI-1].className += "dot-active";
+// }
+
+
 
 // Login Part
 let login_area = document.querySelector(".login");
