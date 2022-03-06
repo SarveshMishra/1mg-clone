@@ -1,7 +1,7 @@
 async function topHeader() {
 	return `
         <div class="logo">
-          <img src="./image/tata_1mg_logo.svg" alt="1mg-logo" />
+          <a id="home-page" href="./index.html"><img src="./image/tata_1mg_logo.svg" alt="1mg-logo" /></a>
         </div>
         <ul>
           <li>

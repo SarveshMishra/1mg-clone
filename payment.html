@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Payment Gateway</title>
+		<!-- <link rel="stylesheet" href="./styles.css" /> -->
+		<style>
+			input {
+				margin-top: 3px;
+				padding: 15px;
+				font-size: 16px;
+				width: 100%;
+				border-radius: 3px;
+				border: 1px solid #dcdcdc;
+			}
+			label {
+				padding-bottom: 5px;
+				font-size: 13px;
+			}
+			.form-container {
+				display: grid;
+				grid-column-gap: 10px;
+				grid-template-columns: auto auto;
+				grid-template-rows: 90px 90px 90px;
+				grid-template-areas: "name name" "number number" "expiration security";
+				max-width: 400px;
+				padding: 20px;
+				color: #707070;
+			}
+			.field-container {
+				position: relative;
+			}
+
+			.field-container input {
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Please do not click refresh button!</h1>
+		<div class="form-container">
+			<div class="field-container">
+				<label for="name">Name</label>
+				<input id="name" maxlength="20" type="text" required />
+			</div>
+			<div class="field-container">
+				<label for="cardnumber">Card Number</label>
+				<input
+					id="cardnumber"
+					type="text"
+					pattern="[0-9]*"
+					inputmode="numeric"
+					required
+				/>
+			</div>
+			<div class="field-container">
+				<label for="expirationdate">Expiration (mm/yy)</label>
+				<input
+					id="expirationdate"
+					type="text"
+					pattern="[0-9]*"
+					inputmode="numeric"
+					required
+				/>
+			</div>
+			<div class="field-container">
+				<label for="securitycode">Security Code</label>
+				<input
+					id="securitycode"
+					type="text"
+					pattern="[0-9]*"
+					inputmode="numeric"
+					required
+				/>
+			</div>
+			<input type="button" value="Place Order" onclick="pay()" />
+		</div>
+		<script>
+			function pay() {
+				// console.log(`I am clicked`);
+				document.getElementById("name").value = "";
+				document.getElementById("cardnumber").value = "";
+				document.getElementById("expirationdate").value = "";
+				document.getElementById("securitycode").value = "";
+				setTimeout(() => {
+					alert(
+						`Your order is successfully placed. You can close this window.`
+					);
+				}, 3000);
+			}
+		</script>
+	</body>
+</html>
