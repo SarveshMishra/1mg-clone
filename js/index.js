@@ -22,7 +22,6 @@ window.signupOn = signupOn;
 window.loginOff = loginOff;
 window.signupOff = signupOff;
 document.getElementById("location").addEventListener("click", showList);
-
 function hide() {
 	let container = document.querySelector(".location-selection ");
 	document.addEventListener("mouseup", function (e) {
@@ -31,7 +30,18 @@ function hide() {
 		}
 	});
 }
-
+// CArt Section
+update_cart_count();
+function update_cart_count() {
+	if (localStorage.getItem("cart-count") == null) {
+		document.getElementById("cart_count").innerHTML = ` 0 Item`;
+	} else {
+		let cart_count = localStorage.getItem("cart-count");
+		console.log(cart_count);
+		document.getElementById("cart_count").innerHTML = `${cart_count} Item`;
+		document.getElementById("cart-icon").innerHTML = `${cart_count}`;
+	}
+}
 // Database Section
 importDB();
 async function importDB() {
@@ -50,7 +60,7 @@ async function importDB() {
 }
 
 //Full Body Health Checkups
-
+var exportdata = "";
 function healthCheckup(data) {
 	var slider = document.querySelector("#full-body-health-checkup");
 	data.forEach(function (ele) {
@@ -109,6 +119,11 @@ function healthCheckup(data) {
 		discount.className = "discount";
 		discount.textContent = ele.discount + "% off";
 		item_price.append(price, actual_price, discount);
+
+		item.addEventListener("click", function () {
+			localStorage.setItem("order_details", JSON.stringify(ele));
+			window.open("./packagedetails.html", "_blank");
+		});
 
 		item.append(item_heading, test_includes, tata_logo, item_price);
 		slider.append(item);
@@ -815,3 +830,5 @@ function radiologyTest(data) {
 // <!-- Ayurveda -->
 // Footer section
 document.querySelector(".footer").innerHTML = await footer();
+
+export { exportdata };

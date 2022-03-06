@@ -429,6 +429,8 @@
      
  }
 
+ 
+
  .download{
      
      align-items: center;
@@ -506,4 +508,128 @@
 .ltVideoflex{
     display: flex;
 }
+#ltslider {
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #ltslider input[type=radio] {
+    display: none;
+ }
+ #ltslider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #ltslides {
+    padding: 10px;
+    width: 100%;
+    
+    
+    background: #F6F6F6;
+    position: relative;
+    z-index: 1;
+ }
+ #ltoverflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #ltslide1:checked ~ #ltslides .ltinner {
+    margin-left: 0;
+ }
+ #ltslide2:checked ~ #ltslides .ltinner {
+    margin-left: -100%;
+ }
+ #ltslide3:checked ~ #ltslides .ltinner {
+    margin-left: -200%;
+ }
+ #ltslide4:checked ~ #ltslides .ltinner {
+    margin-left: -300%;
+ }
+ #ltslides .ltinner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+ #ltslides .ltslide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #F6F6F6;
+ }
+ #ltslides .ltslide_1 {
+    background:#FBFBFB;
+ }
+ #ltslides .ltslide_2 {
+    background:#FBFBFB;;
+ }
+ #ltslides .ltslide_3 {
+    background: #FBFBFB;;;
+ }
+ #ltslides .ltslide_4 {
+    background: #FBFBFB;;;
+ }
+ #ltcontrols {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #ltcontrols label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #ltcontrols label:hover {
+    opacity: 1;
+ }
+ #ltslide1:checked ~ #ltcontrols label:nth-child(2),
+ #ltslide2:checked ~ #ltcontrols label:nth-child(3),
+ #ltslide3:checked ~ #ltcontrols label:nth-child(4),
+ #ltslide4:checked ~ #ltcontrols label:nth-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+    float:right;
+    margin: 0 -50px 0 0;
+    display: block;
+ }
+ #ltslide1:checked ~ #ltcontrols label:nth-last-child(2),
+ #ltslide2:checked ~ #ltcontrols label:nth-last-child(3),
+ #ltslide3:checked ~ #ltcontrols label:nth-last-child(4),
+ #ltslide4:checked ~ #ltcontrols label:nth-last-child(1) {
+    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+    float:left;
+    margin: 0 0 0 -50px;
+    display: block;
+ }
+ #ltbullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #ltbullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #ltslide1:checked ~ #ltbullets label:nth-child(1),
+ #ltslide2:checked ~ #ltbullets label:nth-child(2),
+ #ltslide3:checked ~ #ltbullets label:nth-child(3),
+ #ltslide4:checked ~ #ltbullets label:nth-child(4) {
+    background: gray;
+ }
+ 
+    #ltslides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
 
